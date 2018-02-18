@@ -29,10 +29,22 @@ class Challenge3Spec extends FlatSpec with Matchers {
     val c3 = new C3 {}
 
     // Square 1 starts with the value 1.
+    c3.computeAll(1) shouldEqual(1)
+
     // Square 2 has only one adjacent filled square (with value 1), so it also stores 1.
+    c3.computeAll(2) shouldEqual(1)
+
     // Square 3 has both of the above squares as neighbors and stores the sum of their values, 2.
+    c3.computeAll(3) shouldEqual(2)
+
     // Square 4 has all three of the aforementioned squares as neighbors and stores the sum of their values, 4.
+    c3.computeAll(4) shouldEqual(4)
+
     // Square 5 only has the first and fourth squares as neighbors, so it gets the value 5.
+    c3.computeAll(5) shouldEqual(5)
+
+    // Solve challenge
+    c3.b(312051) shouldEqual(312453)
   }
 
 }
