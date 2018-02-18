@@ -19,7 +19,13 @@ object Challenge {
     println("challenge3a:")
     println(c3.a(312051))
     println("challenge3b:")
-    println(c3.b(0))
+    println(c3.b(312051))
+
+    val c4 = new C4 {}
+    println("challenge4a:")
+    println(c4.a(c4.source))
+    println("challenge4b:")
+    println(c4.b(c4.source))
   }
 }
 
